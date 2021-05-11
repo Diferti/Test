@@ -13,5 +13,11 @@ namespace Praktika
     /// </summary>
     public partial class App : Application
     {
+        public static string ConnectionString()
+        {
+            string connectionString = ConfigurationManager.
+                ConnectionStrings["ConnectionBD"].ConnectionString;
+            return connectionString;
+        }
     }
 }
