@@ -6,5 +6,8 @@
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
+    <Style x:Key="ImgFon" TargetType="Image">
+        <Setter Property="Source" Value="\FolderResource\fon.jpg"/>
+    </Style>
 </ResourceDictionary>
