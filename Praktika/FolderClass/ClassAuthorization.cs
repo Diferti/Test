@@ -45,7 +45,7 @@ namespace Praktika.FolderClass
                     else
                     {
                         FolderTable.ClassUser.Login = TbLogin.Text;
-                        FolderTable.ClassUser.Password= PsbPassword.Password;
+                        FolderTable.ClassUser.Password = PsbPassword.Password;
 
                         FolderWindow.WinSelectGroup winSelectGroup =
                             new FolderWindow.WinSelectGroup();
@@ -62,4 +62,6 @@ namespace Praktika.FolderClass
                 }
             }
         }
+    }
 }
+
