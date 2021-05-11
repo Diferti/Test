@@ -71,9 +71,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FolderClass\ClassAuthorization.cs" />
+    <Compile Include="FolderClass\ClassDG.cs" />
+    <Compile Include="FolderClass\ClassEdit.cs" />
+    <Compile Include="FolderClass\ClassMB.cs" />
     <Compile Include="FolderClass\FolderTable\ClassUser.cs" />
     <Compile Include="FolderWindow\WinAuthorization.xaml.cs">
       <DependentUpon>WinAuthorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWindow\WinSelectGroup.xaml.cs">
+      <DependentUpon>WinSelectGroup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -107,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FolderWindow\WinAuthorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWindow\WinSelectGroup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
