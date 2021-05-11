@@ -8,5 +8,6 @@ namespace Praktika.FolderClass.FolderTable
 {
     class ClassUser
     {
+
     }
 }
