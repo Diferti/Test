@@ -75,11 +75,21 @@
     <Compile Include="FolderClass\ClassEdit.cs" />
     <Compile Include="FolderClass\ClassMB.cs" />
     <Compile Include="FolderClass\FolderTable\ClassUser.cs" />
+    <Compile Include="FolderViewModel\ViewRecievePasswordLogin.cs" />
+    <Compile Include="FolderView\PagesRecievePassword\PageRecievePasswordLogin.xaml.cs">
+      <DependentUpon>PageRecievePasswordLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FolderWindow\WinAuthorization.xaml.cs">
       <DependentUpon>WinAuthorization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FolderWindow\WinRecievePassword.xaml.cs">
+      <DependentUpon>WinRecievePassword.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FolderWindow\WinSelectGroup.xaml.cs">
       <DependentUpon>WinSelectGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FolderWindow\WinSettings.xaml.cs">
+      <DependentUpon>WinSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -98,6 +108,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="FolderResource\SanFrancisco.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="FolderResource\LightDictionaryResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FolderView\PagesRecievePassword\PageRecievePasswordLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,7 +131,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FolderWindow\WinRecievePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FolderWindow\WinSelectGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FolderWindow\WinSettings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

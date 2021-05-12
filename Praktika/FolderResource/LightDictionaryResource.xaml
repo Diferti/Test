@@ -3,11 +3,97 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Indigo.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Blue.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="ImgFon" TargetType="Image">
         <Setter Property="Source" Value="\FolderResource\fon.jpg"/>
+    </Style>
+
+    <Style x:Key="LblStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="LblLogo" TargetType="Label" 
+           BasedOn="{StaticResource LblStyle}">
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="38"/>
+    </Style>
+
+    <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="#BEBEBE"/>
+    </Style>
+
+    <Style TargetType="TextBox" BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <Style TargetType="ComboBox" 
+           BasedOn="{StaticResource MaterialDesignFloatingHintComboBox}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <Style TargetType="DataGrid" 
+           BasedOn="{StaticResource MaterialDesignDataGrid}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <Style TargetType="MenuItem" 
+           BasedOn="{StaticResource MaterialDesignDataGrid}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
+    <Style TargetType="DatePicker" 
+           BasedOn="{StaticResource MaterialDesignFloatingHintDatePicker}">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
     </Style>
 </ResourceDictionary>
