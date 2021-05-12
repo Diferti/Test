@@ -8,6 +8,8 @@ namespace Praktika.FolderClass.FolderTable
 {
     class ClassUser
     {
-
+        public static string IdUser { get; set; }
+        public static string Login { get; set; }
+        public static string Password { get; set; }
     }
 }

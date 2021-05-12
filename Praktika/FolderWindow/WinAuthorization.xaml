@@ -9,7 +9,7 @@
         Title="Авторизация" Height="1080" Width="1920"
         WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\306pc13\Documents\03-1ИСП Семенов\практика\Praktika\Praktika\FolderResource\fon.jpg"/>
+        <ImageBrush ImageSource="C:\Users\306pc14\Documents\Praktika\Praktika\FolderResource\fon.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
