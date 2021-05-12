@@ -9,7 +9,7 @@
         Title="Авторизация" Height="1080" Width="1920"
         WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Background>
-        <ImageBrush ImageSource="C:\Users\306pc14\Documents\Praktika\Praktika\FolderResource\fon.jpg"/>
+        <ImageBrush ImageSource="\FolderResource\fon.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -39,8 +39,8 @@
         <Rectangle RadiusX="40" RadiusY="40" 
                    Grid.Column="2" Grid.Row="2"
                    Grid.ColumnSpan="3"
-                   Grid.RowSpan="5" Fill="White" 
-                   Stroke="Indigo" StrokeThickness="3"/>
+                   Grid.RowSpan="5" Fill="#D9D6D5" 
+                   Stroke="Black" StrokeThickness="3"/>
 
         <Label Content="С возвращением!" Grid.Row="2" Grid.Column="2" 
                Grid.ColumnSpan="3" Style="{DynamicResource LblLogo}"/>
@@ -63,13 +63,13 @@
 
         <Button x:Name="BtnEnter" Content="Вход" Grid.Row="5" 
                  Grid.Column="2" Style="{DynamicResource BtnMain}"
-                materialDesing:ButtonAssist.CornerRadius="15" Grid.ColumnSpan="2" Margin="60,25,12,25"/>
+                materialDesing:ButtonAssist.CornerRadius="15" Grid.ColumnSpan="2" Margin="60,25,12,25" Click="BtnEnter_Click"/>
 
         <Button x:Name="BtnMissPassword" Content="Забыли пароль?" Grid.Row="6" 
                  Grid.Column="3" Style="{DynamicResource BtnMissPassword}"
                 materialDesing:ButtonAssist.CornerRadius="15"
-                Height="Auto" Width="200" Margin="160,12,200,12"/>
-
+                Height="Auto" Width="200" Margin="160,12,200,12" Click="BtnMissPassword_Click"/>
+       
         <materialDesing:PackIcon Kind="Account"
         Grid.Row="3" Grid.Column="2"
         HorizontalContentAlignment="Right"
@@ -83,6 +83,19 @@
         VerticalContentAlignment="Center"
         Height="40"
         Width="40" Margin="60,57,0,0"/>
+
+        <Button Grid.Row="7" Grid.Column="5" x:Name="BtnSetting"
+                Style="{DynamicResource BtnMain}"
+                Height="80" Width="80"
+                materialDesing:ButtonAssist.CornerRadius="100"
+                BorderBrush="Black" BorderThickness="3" Margin="470,110,0,0" Click="BtnSetting_Click">
+            <materialDesing:PackIcon Kind="SettingsOutline"
+        Grid.Row="7" Grid.Column="5"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Center"
+        Height="50"
+        Width="50"/>
+        </Button>
 
     </Grid>
 </Window>

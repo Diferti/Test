@@ -42,7 +42,6 @@
     <Style x:Key="BtnMissPassword" TargetType="Button" 
            BasedOn="{StaticResource BtnMain}">
         <Setter Property="FontSize" Value="18"/>
-        
         <Setter Property="Background" Value="Transparent"/>
     </Style>
    

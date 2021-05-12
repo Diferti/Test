@@ -23,5 +23,20 @@ namespace Praktika.FolderWindow
         {
             InitializeComponent();
         }
+
+        private void BtnEnter_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnMissPassword_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
