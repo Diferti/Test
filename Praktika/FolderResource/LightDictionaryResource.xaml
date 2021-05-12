@@ -57,6 +57,15 @@
         <Setter Property="Height" Value="80"/>
     </Style>
 
+    <Style TargetType="TextBlock" x:Key="TBlockStyle">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+
     <Style TargetType="PasswordBox" BasedOn="{StaticResource MaterialDesignFloatingHintPasswordBox}">
         <Setter Property="FontFamily" Value="SanFrancisco"/>
         <Setter Property="FontSize" Value="26"/>

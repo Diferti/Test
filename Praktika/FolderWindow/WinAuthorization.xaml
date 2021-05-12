@@ -63,12 +63,14 @@
 
         <Button x:Name="BtnEnter" Content="Вход" Grid.Row="5" 
                  Grid.Column="2" Style="{DynamicResource BtnMain}"
-                materialDesing:ButtonAssist.CornerRadius="15" Grid.ColumnSpan="2" Margin="60,25,12,25" Click="BtnEnter_Click"/>
+                materialDesing:ButtonAssist.CornerRadius="15" Grid.ColumnSpan="2" 
+                Margin="60,25,12,25" Click="BtnEnter_Click"/>
 
         <Button x:Name="BtnMissPassword" Content="Забыли пароль?" Grid.Row="6" 
                  Grid.Column="3" Style="{DynamicResource BtnMissPassword}"
                 materialDesing:ButtonAssist.CornerRadius="15"
-                Height="Auto" Width="200" Margin="160,12,200,12" Click="BtnMissPassword_Click"/>
+                Height="Auto" Width="200" Margin="160,12,200,12" 
+                Click="BtnMissPassword_Click"/>
        
         <materialDesing:PackIcon Kind="Account"
         Grid.Row="3" Grid.Column="2"
@@ -88,7 +90,8 @@
                 Style="{DynamicResource BtnMain}"
                 Height="80" Width="80"
                 materialDesing:ButtonAssist.CornerRadius="100"
-                BorderBrush="Black" BorderThickness="3" Margin="470,110,0,0" Click="BtnSetting_Click">
+                BorderBrush="Black" BorderThickness="3" 
+                Margin="470,110,0,0" Click="BtnSetting_Click">
             <materialDesing:PackIcon Kind="SettingsOutline"
         Grid.Row="7" Grid.Column="5"
         HorizontalContentAlignment="Center"
