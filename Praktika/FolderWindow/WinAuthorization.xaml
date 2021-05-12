@@ -65,7 +65,7 @@
                  Grid.Column="2" Style="{DynamicResource BtnMain}"
                 materialDesing:ButtonAssist.CornerRadius="15" Grid.ColumnSpan="2" Margin="60,25,12,25"/>
 
-        <Button x:Name="BtnMissPassword" Content="Забыли пароль?" Grid.Row="6" 
+        <Button x:Name="BtnMissPassword" Content="Вы Забыли пароль?" Grid.Row="6" 
                  Grid.Column="3" Style="{DynamicResource BtnMissPassword}"
                 materialDesing:ButtonAssist.CornerRadius="15"
                 Height="Auto" Width="200" Margin="160,12,200,12"/>
