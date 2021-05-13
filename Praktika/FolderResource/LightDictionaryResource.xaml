@@ -66,6 +66,24 @@
         <Setter Property="Background" Value="Transparent"/>
     </Style>
 
+    <Style TargetType="ToolTip" x:Key="TTStyle">
+        <Setter Property="FontFamily" Value="SanFrancisco"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="12"/>
+        <Setter Property="Padding" Value="12"/>
+        <Setter Property="Background" Value="#BADAF8"/>
+        <Setter Property="Placement" Value="Right"/>
+        <Setter Property="Margin" Value="20,0,0,0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="PlacementRectangle" Value="60,0,0,0"/>
+        <Setter Property="HorizontalOffset" Value="15"/>
+        <Setter Property="VerticalOffset" Value="6"/>
+        <Setter Property="HasDropShadow" Value="True"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+
+
     <Style TargetType="PasswordBox" BasedOn="{StaticResource MaterialDesignFloatingHintPasswordBox}">
         <Setter Property="FontFamily" Value="SanFrancisco"/>
         <Setter Property="FontSize" Value="26"/>

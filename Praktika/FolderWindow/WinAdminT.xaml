@@ -1,15 +1,15 @@
-﻿<Window x:Class="Praktika.FolderWindow.WinMenuS"
+﻿<Window x:Class="Praktika.FolderWindow.WinAdminT"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Praktika.FolderWindow"
-        xmlns:materialDesing="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Меню" Height="1080" Width="1920"
         WindowStartupLocation="CenterScreen" 
         WindowState="Maximized">
-    
+
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames 
@@ -37,10 +37,10 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#A9C0D0">
-        
+
         <Frame x:Name="FrmListStudent" NavigationUIVisibility="Hidden" Margin="60,0,0,0"/>
-        
-        
+
+
         <Grid x:Name="GridMenu" Width="60" 
               HorizontalAlignment="Left" Background="#BADAF8">
             <Grid.Effect>
@@ -60,16 +60,16 @@
                     <Button x:Name="ButtonOpenMenu" Height="50" Width="50" 
                             Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
                             Background="{x:Null}" BorderBrush="{x:Null}"
-                            Foreground="Black" Click="ButtonOpenMenu_Click" Margin="5,5,0,5" 
-                            HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <materialDesing:PackIcon Kind="Menu" Width="25" Height="25"/>
+                            Foreground="Black" Margin="5,5,0,5" 
+                            HorizontalAlignment="Left" VerticalAlignment="Center" Click="ButtonOpenMenu_Click">
+                        <materialDesign:PackIcon Kind="Menu" Width="25" Height="25"/>
                     </Button>
                     <Button x:Name="ButtonCloseMenu" Visibility="Collapsed" Height="60" Width="60" 
                             HorizontalAlignment="Right" VerticalAlignment="Top" 
                             Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" 
-                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" 
-                            Click="ButtonCloseMenu_Click">
-                        <materialDesing:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
+                            Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" Click="ButtonCloseMenu_Click" 
+                            >
+                        <materialDesign:PackIcon Kind="ArrowLeft" Width="25" Height="25"/>
                     </Button>
                     <TextBlock x:Name="TbMenu" Text="Доброго времени суток!" Visibility="Collapsed" 
                                HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -81,16 +81,16 @@
                     <ListViewItem x:Name="ItemStudent" Height="60">
                         <StackPanel Orientation="Horizontal">
 
-                            <materialDesing:PackIcon Kind="UserCardDetails" Height="30" Width="30" Margin="5"/>
+                            <materialDesign:PackIcon Kind="UserCardDetails" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Список студентов" VerticalAlignment="Center" Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
-                    
+
                     <ListViewItem x:Name="ItemAppraisals" Height="60" 
                                   Selected="ItemAppraisals_Selected">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesing:PackIcon Kind="Numeric5BoxOutline" 
+                            <materialDesign:PackIcon Kind="Numeric5BoxOutline" 
                                                      Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Оценки" VerticalAlignment="Center" Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
@@ -98,33 +98,45 @@
                     </ListViewItem>
                     <ListViewItem x:Name="ItemMarkVisit" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesing:PackIcon Kind="EventTick" Height="30" Width="30" Margin="5"/>
+                            <materialDesign:PackIcon Kind="EventTick" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Отметка присутствующих" VerticalAlignment="Center"  Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemVisit" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesing:PackIcon Kind="CalendarText" Height="30" Width="30" Margin="5"/>
+                            <materialDesign:PackIcon Kind="CalendarText" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Посещаемость" VerticalAlignment="Center"  Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemTab" Height="590" 
+                    <ListViewItem x:Name="ItemTab" Height="530" 
                                   Visibility="Hidden">
                         <StackPanel Orientation="Horizontal">
                         </StackPanel>
                     </ListViewItem>
+                    <ListViewItem x:Name="ItemGroup" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="UserGroup" Height="30" Width="30" Margin="5"/>
+                            <TextBlock Text="03-1ИСП" VerticalAlignment="Center"  Margin="5 10"
+                                       Style="{DynamicResource TBlockStyle}"/>
+                            <ToggleButton x:Name="TbGroup"
+                             Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                             ToolTip="Default ToggleButton Style" Width="40"/>
+                            <TextBlock Text="01-1ОТИ" VerticalAlignment="Center"  Margin="5 10"
+                                       Style="{DynamicResource TBlockStyle}"/>
+                        </StackPanel>
+                    </ListViewItem>
                     <ListViewItem x:Name="ItemSeting" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesing:PackIcon Kind="SettingsOutline" Height="30" Width="30" Margin="5"/>
+                            <materialDesign:PackIcon Kind="SettingsOutline" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Настройки" VerticalAlignment="Center"  Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemExit" Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesing:PackIcon Kind="ExitRun" Height="30" Width="30" Margin="5"/>
+                            <materialDesign:PackIcon Kind="ExitRun" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Выход" VerticalAlignment="Center"  Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
@@ -132,6 +144,5 @@
                 </ListView>
             </StackPanel>
         </Grid>
-        
     </Grid>
 </Window>

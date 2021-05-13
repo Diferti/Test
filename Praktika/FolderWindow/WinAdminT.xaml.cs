@@ -10,21 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Praktika.FolderWindow
 {
     /// <summary>
-    /// Логика взаимодействия для WinMenuS.xaml
+    /// Логика взаимодействия для WinAdminT.xaml
     /// </summary>
-    public partial class WinMenuS : Window
+    public partial class WinAdminT : Window
     {
-        public WinMenuS()
+        public WinAdminT()
         {
             InitializeComponent();
             FrmListStudent.Navigate(new Page1());
             FolderClass.ClassPage.MainFrame = FrmListStudent;
+        }
+
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            TbMenu.Visibility = Visibility.Collapsed;
+            ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -32,19 +38,20 @@ namespace Praktika.FolderWindow
             ButtonCloseMenu.Visibility = Visibility.Visible;
             ButtonOpenMenu.Visibility = Visibility.Collapsed;
             TbMenu.Visibility = Visibility.Visible;
-        }
-
-        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
-        {
-            ButtonCloseMenu.Visibility = Visibility.Collapsed;         
-            TbMenu.Visibility = Visibility.Collapsed;
-            ButtonOpenMenu.Visibility = Visibility.Visible;
-        }
+        }       
 
         private void ItemAppraisals_Selected(object sender, RoutedEventArgs e)
         {
-            FrmListStudent.NavigationService.RemoveBackEntry();
-            FrmListStudent.Navigate(new Page2());
-        }        
+            if (TbGroup.IsChecked == true)
+            {
+                FrmListStudent.NavigationService.RemoveBackEntry();
+                FrmListStudent.Navigate(new Page3());
+            }
+            else
+            {
+                FrmListStudent.NavigationService.RemoveBackEntry();
+                FrmListStudent.Navigate(new Page2());
+            }
+        }
     }
 }

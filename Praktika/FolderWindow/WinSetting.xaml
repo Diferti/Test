@@ -1,0 +1,73 @@
+﻿<Window x:Class="Praktika.FolderWindow.WinSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika.FolderWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Настройки" Height="650" Width="500" 
+        Background="#D9D6D5" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Настройки" 
+               Style="{DynamicResource LblLogo}" 
+               Grid.Column="1" Grid.Row="1" 
+               Grid.ColumnSpan="4"/>
+
+        <Label Content="Выбор темы" 
+               Style="{DynamicResource LblStyle}" 
+               Grid.Column="1" Grid.Row="2"/>
+
+        <Button x:Name="BtnHelp" Content="Техническая поддержка" 
+                Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4"
+                Style="{DynamicResource BtnMain}"
+                materialDesign:ButtonAssist.CornerRadius="15"/>
+
+        <Button x:Name="BtnInfo" Content="Информация о программе" 
+                Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4"
+                Style="{DynamicResource BtnMain}"
+                materialDesign:ButtonAssist.CornerRadius="15"/>
+
+        <Button x:Name="BtnGuide" Content="Руководство пользователя" 
+                Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4"
+                Style="{DynamicResource BtnMain}"
+                materialDesign:ButtonAssist.CornerRadius="15"/>
+
+        <materialDesign:PackIcon Kind="WhiteBalanceSunny"
+        Grid.Row="2" Grid.Column="3"
+        HorizontalContentAlignment="Right"
+        VerticalContentAlignment="Center"
+        Height="40"
+        Width="40" Margin="0,35,0,0"/>
+
+        <materialDesign:PackIcon Kind="NightSky"
+        Grid.Row="2" Grid.Column="3"
+        HorizontalContentAlignment="Right"
+        VerticalContentAlignment="Center"
+        Height="40"
+        Width="40" Margin="92,35,0,0"/>
+
+        <ToggleButton x:Name="TbGroup" Grid.Column="3" Grid.Row="2"
+                             Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                             ToolTip="Default ToggleButton Style"/>
+    </Grid>
+</Window>
