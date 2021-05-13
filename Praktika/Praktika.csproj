@@ -79,6 +79,7 @@
     <Compile Include="FolderClass\ClassMB.cs" />
     <Compile Include="FolderClass\ClassPage.cs" />
     <Compile Include="FolderClass\FolderTable\ClassUser.cs" />
+    <Compile Include="FolderWindow\Class1.cs" />
     <Compile Include="FolderWindow\WinAdminT.xaml.cs">
       <DependentUpon>WinAdminT.xaml</DependentUpon>
     </Compile>
