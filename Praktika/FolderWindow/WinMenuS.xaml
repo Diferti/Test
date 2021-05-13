@@ -9,6 +9,7 @@
         Title="Меню" Height="1080" Width="1920"
         WindowStartupLocation="CenterScreen" 
         WindowState="Maximized">
+    
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames 
@@ -36,6 +37,10 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="#A9C0D0">
+        
+        <Frame x:Name="FrmListStudent" NavigationUIVisibility="Hidden" Margin="60,0,0,0"/>
+        
+        
         <Grid x:Name="GridMenu" Width="60" 
               HorizontalAlignment="Left" Background="#BADAF8">
             <Grid.Effect>
@@ -75,12 +80,14 @@
                           >
                     <ListViewItem x:Name="ItemStudent" Height="60">
                         <StackPanel Orientation="Horizontal">
+                            
                             <materialDesing:PackIcon Kind="UserCardDetails" Height="30" Width="30" Margin="5"/>
                             <TextBlock Text="Список студентов" VerticalAlignment="Center" Margin="5 10"
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemAppraisals" Height="60">
+                    <ListViewItem x:Name="ItemAppraisals" Height="60" 
+                                  Selected="ItemAppraisals_Selected">
                         <StackPanel Orientation="Horizontal">
                             <materialDesing:PackIcon Kind="Numeric5BoxOutline" 
                                                      Height="30" Width="30" Margin="5"/>
@@ -102,9 +109,16 @@
                                        Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemTab" Height="650" 
+                    <ListViewItem x:Name="ItemTab" Height="590" 
                                   Visibility="Hidden">
                         <StackPanel Orientation="Horizontal">
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemSeting" Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesing:PackIcon Kind="SettingsOutline" Height="30" Width="30" Margin="5"/>
+                            <TextBlock Text="Настройки" VerticalAlignment="Center"  Margin="5 10"
+                                       Style="{DynamicResource TBlockStyle}"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="ItemExit" Height="60">
@@ -117,5 +131,6 @@
                 </ListView>
             </StackPanel>
         </Grid>
+        
     </Grid>
 </Window>

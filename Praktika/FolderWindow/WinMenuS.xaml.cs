@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Praktika.FolderWindow
@@ -22,6 +23,8 @@ namespace Praktika.FolderWindow
         public WinMenuS()
         {
             InitializeComponent();
+            FrmListStudent.Navigate(new Page1());
+            FolderClass.ClassPage.MainFrame = FrmListStudent;
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -37,5 +40,11 @@ namespace Praktika.FolderWindow
             TbMenu.Visibility = Visibility.Collapsed;
             ButtonOpenMenu.Visibility = Visibility.Visible;
         }
+
+        private void ItemAppraisals_Selected(object sender, RoutedEventArgs e)
+        {
+            FrmListStudent.NavigationService.RemoveBackEntry();
+            FrmListStudent.Navigate(new Page2());
+        }        
     }
 }
